@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="text-right">
-      <v-btn @click.prevent="openUpdateModal(null ,true)">
+      <v-btn
+        class="white--text"
+        color="rgba(14, 14, 14, 0.99)"
+        @click.prevent="openUpdateModal(null ,true)"
+      >
         新增優惠券
       </v-btn>
     </div>
@@ -49,7 +53,9 @@
       v-model="pagination.current_page"
       :length="pagination.total_pages"
       :total-visible="5"
+      class="mt-5"
       circle
+      color="warning"
       @input="getCoupons"
     />
     <v-dialog

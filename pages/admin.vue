@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrap">
     <Header />
     <v-container>
       <v-row>
@@ -28,6 +28,8 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.wrap {
+  padding-top: 64px;
+}
 </style>

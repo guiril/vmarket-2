@@ -1,7 +1,11 @@
 <template>
   <div>
     <div class="text-right">
-      <v-btn @click.prevent="openUpdateModal(null ,true)">
+      <v-btn
+        class="white--text"
+        color="rgba(14, 14, 14, 0.99)"
+        @click.prevent="openUpdateModal(null ,true)"
+      >
         新增商品
       </v-btn>
     </div>
@@ -55,7 +59,9 @@
       v-model="pagination.current_page"
       :length="pagination.total_pages"
       :total-visible="5"
+      class="mt-5"
       circle
+      color="warning"
       @input="getProducts"
     />
     <v-dialog
@@ -128,12 +134,31 @@
               </v-col>
               <v-col cols="4">
                 <v-text-field
+                  v-model="tempProduct.imageUrl"
                   label="圖片網址"
                   required
                 />
-                <v-btn block>
-                  或 上傳圖片
-                </v-btn>
+                <label
+                  for="customFile"
+                  class="custom-file v-btn orange darken-4 py-2 font-weight-bold"
+                >
+                  <span v-if="!isUploading">
+                    或 上傳圖片
+                  </span>
+                  <v-progress-circular
+                    v-if="isUploading"
+                    indeterminate
+                    color="white"
+                    size="18"
+                    width="2"
+                  />
+                  <input
+                    id="customFile"
+                    ref="file"
+                    type="file"
+                    @change="uploadingImg"
+                  >
+                </label>
                 <img
                   class="mt-5"
                   :src="tempProduct.imageUrl"
@@ -216,10 +241,12 @@ export default {
   },
   data() {
     return {
+      modalIsLoading: false,
       isUpdateModalOpen: false,
       isDeleteModalOpen: false,
       isLoading: true,
       isNew: true,
+      isUploading: false,
       products: [],
       pagination: {},
       tempProduct: {},
@@ -251,7 +278,30 @@ export default {
     openDeleteModal(item) {
       this.isDeleteModalOpen = true;
       this.tempProduct = { ...item };
-      // console.log(`刪除${item}`);
+    },
+    async uploadingImg() {
+      const file = this.$refs.file.files[0];
+      const formData = new FormData();
+
+      if (this.$refs.file.files[0]) {
+        formData.append('file-to-upload', file);
+        this.isUploading = true;
+      } else {
+        return;
+      }
+
+      const res = await this.$axios.$post(`${this.$config.apiPath
+      }/api/${this.$config.customPath}/admin/upload`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      this.isUploading = false;
+
+      if (res.success) {
+        this.$set(this.tempProduct, 'imageUrl', res.imageUrl);
+      }
     },
     async updateProduct() {
       this.modalIsLoading = true;
@@ -283,6 +333,13 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.custom-file {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  input {
+    display: none;
+  }
+}
 </style>

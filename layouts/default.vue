@@ -2,10 +2,17 @@
   <div>
     <v-app>
       <Nuxt />
+      <Alert />
     </v-app>
   </div>
 </template>
 
-<style>
+<script>
+import Alert from '@/components/TheAlert';
 
-</style>
+export default {
+  components: {
+    Alert,
+  },
+};
+</script>

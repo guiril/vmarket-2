@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="py-10"
+    class="footer py-10"
     style="background-color: #11131C"
   >
     <small
@@ -9,9 +9,3 @@
     >© Copyright 2020 V-MARKET</small>
   </footer>
 </template>
-
-<script>
-export default {
-  name: 'TheFooter',
-};
-</script>

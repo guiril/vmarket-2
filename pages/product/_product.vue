@@ -79,8 +79,8 @@
 </template>
 
 <script>
+import Footer from '@/components/TheFooter';
 import Navbar from '~/components/TheNavbar.vue';
-import Footer from '~/components/TheFooter.vue';
 import CartButton from '~/components/CartButton.vue';
 
 export default {

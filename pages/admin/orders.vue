@@ -2,13 +2,13 @@
   <div>
     <v-data-table
       :headers="headers"
-      :items="orders"
+      :items="filteredOrders"
       hide-default-footer
       disable-sort
       :loading="isLoading"
     >
       <template v-slot:[`item.create_at`]="{ item }">
-        {{ item.create_at | date }}
+        <span v-if="item.create_at">{{ item.create_at | date }}</span>
       </template>
       <template v-slot:[`item[user.email]`]="{ item }">
         {{ item.user.email }}
@@ -56,7 +56,9 @@
       v-model="pagination.current_page"
       :length="pagination.total_pages"
       :total-visible="5"
+      class="mt-5"
       circle
+      color="warning"
       @input="getOrders"
     />
   </div>
@@ -90,11 +92,21 @@ export default {
         { text: '商品名稱', value: 'title' },
         { text: '觀看期限', value: 'num' },
         { text: '訂單金額', value: 'total' },
+        { text: '備註', value: 'message' },
         { text: '付款狀態', value: 'is_paid' },
       ],
       orders: [],
       pagination: {},
     };
+  },
+  computed: {
+    filteredOrders() {
+      return this.orders.filter((el) => {
+        if (el.create_at) {
+          return el;
+        }
+      });
+    },
   },
   methods: {
     async getOrders(page) {

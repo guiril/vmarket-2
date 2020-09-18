@@ -9,7 +9,7 @@
         v-for="(category, index) in categories"
         :key="index"
         class="rounded-0"
-        @click="activeText = category.text"
+        @click="changeCategory(category.text)"
       >
         <v-list-item-icon>
           <v-icon
@@ -34,14 +34,19 @@ export default {
   data() {
     return {
       activeIndex: 0,
-      activeText: '全部電影',
+      // activeCategory: '全部電影',
       categories: [
         { text: '全部電影', icon: 'theaters' },
-        { text: '復仇者', icon: 'theaters' },
+        { text: '復仇者成員', icon: 'theaters' },
         { text: '復仇者聯盟', icon: 'theaters' },
         { text: '無限寶石', icon: 'theaters' },
       ],
     };
+  },
+  methods: {
+    changeCategory(category) {
+      this.$emit('changeCategory', category);
+    },
   },
 };
 </script>

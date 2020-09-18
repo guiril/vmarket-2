@@ -5,13 +5,13 @@
     <v-container>
       <v-row>
         <v-col cols="3">
-          <Menu />
+          <Menu @changeCategory="changeCategory" />
         </v-col>
         <v-col cols="9">
           <v-row>
             <v-col cols="5">
               <v-text-field
-                v-model="searchText"
+                v-model="filter"
                 label="Search"
                 append-icon="search"
                 color="warning"
@@ -20,7 +20,7 @@
           </v-row>
           <v-row>
             <v-col
-              v-for="(product, index) in products"
+              v-for="(product, index) in filteredProducts"
               :key="index"
               sm="6"
               md="4"
@@ -78,6 +78,22 @@
               </v-card>
             </v-col>
           </v-row>
+          <v-pagination
+            v-if="pagination && !filter && activeCategory === '全部電影'"
+            v-model="pagination.current_page"
+            :length="pagination.total_pages"
+            :total-visible="5"
+            class="mt-5"
+            circle
+            color="warning"
+            @input="getProducts"
+          />
+          <h3
+            v-if="filteredProducts.length === 0"
+            class="text-center"
+          >
+            找不到資料
+          </h3>
         </v-col>
       </v-row>
     </v-container>
@@ -87,10 +103,10 @@
 </template>
 
 <script>
+import Footer from '@/components/TheFooter';
 import Navbar from '~/components/TheNavbar.vue';
-import Footer from '~/components/TheFooter.vue';
 import Carousel from '~/components/HomeCarousel.vue';
-import Menu from '~/components/HomeMenu.vue';
+import Menu from '~/components/ProductsMenu.vue';
 import CartButton from '~/components/CartButton.vue';
 
 export default {
@@ -104,23 +120,50 @@ export default {
   async asyncData({ $axios, $config: { apiPath, customPath } }, page = 1) {
     const res = await $axios.$get(`${apiPath}/api/${customPath
     }/products?page=${page}`);
-    // console.log(res);
+
+    const res2 = await $axios.$get(`${apiPath}/api/${customPath
+    }/products/all`);
+
     return {
       products: res.products,
+      pagination: res.pagination,
+      allProducts: res2.products,
     };
   },
   data() {
     return {
-      searchText: '',
+      activeCategory: '全部電影',
+      filter: '',
+      allProducts: [],
       products: [],
+      pagination: {},
     };
   },
   computed: {
+    filteredProducts() {
+      const vm = this;
+      let products = [];
+      if (this.activeCategory === '全部電影' && !this.filter) {
+        products = this.products;
+      } else if (!this.filter) {
+        products = this.allProducts.filter((el) => el.category === vm.activeCategory);
+      } else {
+        products = this.allProducts.filter((el) => el.title.match(vm.filter));
+      }
+      return products;
+    },
     // isCartLoading() {
     //   return this.$store.state.cart.isLoading;
     // },
   },
   methods: {
+    async getProducts(page) {
+      const res = await this.$axios.$get(`${this.$config.apiPath
+      }/api/${this.$config.customPath}/products?page=${page}`);
+
+      this.products = res.products;
+      this.pagination = res.pagination;
+    },
     checkDetail(id) {
       this.$router.push(`product/${id}`);
     },
@@ -130,6 +173,9 @@ export default {
         qty: 1,
       });
       this.$store.dispatch('cart/getCarts');
+    },
+    changeCategory(category) {
+      this.activeCategory = category;
     },
   },
 };

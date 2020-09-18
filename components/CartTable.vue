@@ -1,5 +1,8 @@
 <template>
-  <v-card min-width="300">
+  <v-card
+    min-width="300"
+    dark
+  >
     <v-card-title class="justify-center">
       購物車商品
     </v-card-title>
@@ -42,7 +45,8 @@
       <v-btn
         class="mx-auto"
         block
-        color="primary"
+        color="#e3dfcf"
+        style="color: rgba(14, 14, 14, 0.99);"
         to="/cart"
       >
         前往購物車

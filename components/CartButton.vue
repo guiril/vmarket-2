@@ -7,7 +7,9 @@
       class="ps-absolute"
       to="/cart"
     >
-      <v-icon>shopping_cart</v-icon>
+      <v-icon style="color: #e3dfcf;">
+        shopping_cart
+      </v-icon>
       <v-badge
         v-if="cartsLength !== 0"
         :content="cartsLength"

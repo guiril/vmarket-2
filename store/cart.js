@@ -1,6 +1,7 @@
 export const state = () => ({
   carts: [],
   total: null,
+  finalTotal: null,
   isLoading: false,
 });
 
@@ -8,6 +9,7 @@ export const mutations = {
   setCarts(state, carts) {
     state.carts = carts.carts;
     state.total = carts.total;
+    state.finalTotal = carts.final_total;
   },
   setLoading(state, isLoading) {
     state.isLoading = isLoading;

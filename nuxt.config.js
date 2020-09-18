@@ -37,7 +37,9 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    { src: '~/plugins/bus.js' },
     { src: '~/plugins/fliters.js' },
+    { src: '~/plugins/vee-validate.js', mode: 'client' },
   ],
   /*
   ** Auto import components
