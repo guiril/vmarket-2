@@ -121,7 +121,10 @@ export default {
     return {
       isSubmit: false,
       orderId: '',
-      order: {},
+      order: {
+        is_paid: Boolean,
+        user: {},
+      },
       headersProduct: [
         { value: 'title', text: '商品' },
         { value: 'qty', text: '觀看次數' },
@@ -137,8 +140,11 @@ export default {
   methods: {
     async getOrder() {
       const res = await this.$axios.$get(`${this.$config.apiPath}/api/${this.$config.customPath
-      }/order/${this.id}`);
-      this.order = res.order;
+      }/order/${this.orderId}`);
+
+      if (res.success) {
+        this.$set(this.order, 'is_paid', res.order.is_paid);
+      }
     },
     async payOrder() {
       this.isSubmit = true;

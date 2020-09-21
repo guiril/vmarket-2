@@ -74,7 +74,7 @@ export default {
   async asyncData({ $axios, $config: { apiPath, customPath } }, page = 1) {
     const res = await $axios.$get(`${apiPath}/api/${customPath
     }/admin/orders?page=${page}`);
-    // console.log(res);
+
     return {
       orders: res.orders,
       pagination: res.pagination,
@@ -113,7 +113,7 @@ export default {
       this.isLoading = true;
       const res = await this.$axios.$get(`${this.$config.apiPath
       }/api/${this.$config.customPath}/admin/orders?page=${page}`);
-      // console.log(res);
+
       this.orders = res.orders;
       this.pagination = res.pagination;
       this.isLoading = false;

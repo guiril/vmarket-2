@@ -2,7 +2,9 @@ import Vue from 'vue';
 import {
   ValidationObserver, ValidationProvider, extend, localize,
 } from 'vee-validate';
-import { required, email, regex } from 'vee-validate/dist/rules';
+import {
+  required, email, regex, max, min,
+} from 'vee-validate/dist/rules';
 import zhTW from 'vee-validate/dist/locale/zh_TW.json';
 
 localize('zh_TW', zhTW);
@@ -10,6 +12,8 @@ localize('zh_TW', zhTW);
 // No message specified.
 extend('email', email);
 extend('regex', regex);
+extend('max', max);
+extend('min', min);
 
 // Override the default message.
 extend('required', {

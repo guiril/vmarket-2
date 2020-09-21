@@ -20,7 +20,7 @@ export const actions = {
   async getCarts({ commit }) {
     const res = await this.$axios.$get(`${this.$config.apiPath}/api/${
       this.$config.customPath}/cart`);
-    // console.log(res.data);
+
     commit('setCarts', res.data);
   },
   async addtoCart({ commit }, product) {
@@ -28,12 +28,11 @@ export const actions = {
       product_id: product.id,
       qty: product.qty,
     };
-    // console.log(data);
+
     commit('setLoading', true);
     await this.$axios.$post(`${this.$config.apiPath}/api/${
       this.$config.customPath}/cart`, { data });
     commit('setLoading', false);
-    // console.log(res);
   },
   async removeCartItem({ commit }, id) {
     commit('setLoading', true);

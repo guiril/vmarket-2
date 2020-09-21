@@ -166,7 +166,7 @@
                     <ValidationProvider
                       v-slot="{ errors }"
                       name="聯絡電話"
-                      :rules="{ required: true, regex: /^[0-9]+$/ }"
+                      :rules="{ required: true, regex: /^[0-9]+$/, min: 10, max: 10 }"
                     >
                       <v-text-field
                         v-model="orderForm.user.tel"

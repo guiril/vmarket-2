@@ -193,7 +193,7 @@ export default {
   async asyncData({ $axios, $config: { apiPath, customPath } }, page = 1) {
     const res = await $axios.$get(`${apiPath}/api/${customPath
     }/admin/coupons?page=${page}`);
-    // console.log(res);
+
     return {
       coupons: res.coupons,
       pagination: res.pagination,
@@ -259,7 +259,6 @@ export default {
       this.modalIsLoading = false;
       this.isUpdateModalOpen = false;
       this.getCoupons();
-      // console.log(res);
     },
     async deleteCoupon() {
       await this.$axios.$delete(`${this.$config.apiPath

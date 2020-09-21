@@ -101,7 +101,7 @@ export default {
     const id = params.product;
     const res = await $axios.$get(`${apiPath}/api/${customPath
     }/product/${id}`);
-    // console.log(res);
+
     return {
       product: res.product,
     };

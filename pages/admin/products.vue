@@ -231,7 +231,7 @@ export default {
   async asyncData({ $axios, $config: { apiPath, customPath } }, page = 1) {
     const res = await $axios.$get(`${apiPath}/api/${customPath
     }/admin/products?page=${page}`);
-    // console.log(res);
+
     return {
       products: res.products,
       pagination: res.pagination,
@@ -265,7 +265,7 @@ export default {
       this.isLoading = true;
       const res = await this.$axios.$get(`${this.$config.apiPath
       }/api/${this.$config.customPath}/admin/products?page=${page}`);
-      // console.log(res);
+
       this.products = res.products;
       this.pagination = res.pagination;
       this.isLoading = false;
@@ -321,7 +321,6 @@ export default {
       this.modalIsLoading = false;
       this.isUpdateModalOpen = false;
       this.getProducts();
-      // console.log(res);
     },
     async deleteProduct() {
       await this.$axios.$delete(`${this.$config.apiPath
