@@ -10,7 +10,7 @@
 ### 其它套件
 
 * `axios`
-* `VeeValidate` 表單驗證
+* `VeeValidate`
 * `ESLint Airbnb`
 
 ## 使用到的 API
