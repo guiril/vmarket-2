@@ -16,7 +16,6 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
     "axios": "^0.20.0",
-    "bootstrap": "^4.5.2",
     "nuxt": "^2.14.0",
     "vee-validate": "^3.3.11"
   },
