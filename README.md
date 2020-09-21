@@ -32,7 +32,6 @@
 * 取得商品列表_all `GET` `/admin/products/all`
 * 修改產品 `PUT` `/admin/product/:id`
 * 刪除產品 `DELETE` `/admin/product/:product_id`
-
 * 上傳圖片 `POST` `admin/upload`
 
 #### 訂單
