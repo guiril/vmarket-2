@@ -6,10 +6,16 @@
         <v-breadcrumbs :items="subNavbar" />
       </nav>
       <v-row>
-        <v-col cols="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-img :src="product.imageUrl" />
         </v-col>
-        <v-col cols="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <h2>{{ product.title }}</h2>
           <hr class="my-3">
           <v-chip
@@ -46,7 +52,8 @@
           </div>
           <v-row>
             <v-col
-              cols="6"
+              cols="12"
+              sm="6"
               class="d-flex align-center"
             >
               <v-select
@@ -56,7 +63,8 @@
               />
             </v-col>
             <v-col
-              cols="6"
+              cols="12"
+              s="6"
               class="d-flex align-center"
             >
               <v-btn

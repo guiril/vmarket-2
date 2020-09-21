@@ -151,7 +151,7 @@
                     <ValidationProvider
                       v-slot="{ errors }"
                       name="Email"
-                      rules="email"
+                      rules="required|email"
                     >
                       <v-text-field
                         v-model="orderForm.user.email"
@@ -163,10 +163,17 @@
                 </v-row>
                 <v-row>
                   <v-col cols="4">
-                    <v-text-field
-                      v-model="orderForm.user.tel"
-                      label="電話"
-                    />
+                    <ValidationProvider
+                      v-slot="{ errors }"
+                      name="聯絡電話"
+                      :rules="{ required: true, regex: /^[0-9]+$/ }"
+                    >
+                      <v-text-field
+                        v-model="orderForm.user.tel"
+                        label="電話"
+                        :error-messages="errors"
+                      />
+                    </ValidationProvider>
                   </v-col>
                   <v-col cols="8">
                     <v-text-field
