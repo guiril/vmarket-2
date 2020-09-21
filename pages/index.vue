@@ -4,12 +4,23 @@
     <Carousel />
     <v-container>
       <v-row>
-        <v-col cols="3">
+        <v-col
+          cols="12"
+          sm="5"
+          md="3"
+        >
           <Menu @changeCategory="changeCategory" />
         </v-col>
-        <v-col cols="9">
+        <v-col
+          cols="12"
+          sm="7"
+          md="9"
+        >
           <v-row>
-            <v-col cols="5">
+            <v-col
+              cols="12"
+              sm="8"
+            >
               <v-text-field
                 v-model="filter"
                 label="Search"
@@ -22,8 +33,9 @@
             <v-col
               v-for="(product, index) in filteredProducts"
               :key="index"
-              sm="6"
+              cols="12"
               md="4"
+              sm="6"
               class="pt-0"
             >
               <v-card

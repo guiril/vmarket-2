@@ -19,16 +19,14 @@
       >
         <template v-slot:activator="{ on, attrs }">
           <v-btn
-            class="mr-4"
             text
             style="color: #e3dfcf;"
             v-bind="attrs"
             v-on="on"
           >
-            <v-icon class="mr-1">
+            <v-icon>
               shopping_cart
             </v-icon>
-            Cart
             <v-badge
               v-if="cartsLength !== 0"
               :content="cartsLength"
@@ -43,10 +41,9 @@
         style="color: #e3dfcf;"
         to="/admin/products"
       >
-        <v-icon class="mr-1">
+        <v-icon>
           account_box
         </v-icon>
-        Admin
       </v-btn>
     </v-toolbar>
   </nav>

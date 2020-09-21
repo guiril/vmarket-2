@@ -1,6 +1,7 @@
 <template>
   <v-card
-    min-width="300"
+    min-width="260"
+    max-width="300"
     dark
   >
     <v-card-title class="justify-center">
@@ -14,6 +15,7 @@
       hide-default-footer
       :items-per-page="Number(50)"
       :loading="isCartLoading"
+      mobile-breakpoint="0"
     >
       <template v-slot:[`item.delete`]="{ item }">
         <v-icon @click.prevent="removeItem(item.id)">

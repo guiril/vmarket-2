@@ -3,7 +3,10 @@
     <Navbar />
     <v-container>
       <v-row justify="center">
-        <v-col cols="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <v-data-table
             :headers="headersProduct"
             :items="products"
@@ -33,7 +36,10 @@
         </v-col>
       </v-row>
       <v-row justify="center">
-        <v-col cols="6">
+        <v-col
+          cols="12"
+          sm="6"
+        >
           <div class="v-data-table theme--light">
             <div class="v-data-table__wrapper">
               <table>
@@ -73,9 +79,12 @@
             </div>
           </div>
           <v-row v-if="!order.is_paid">
-            <v-col class="d-flex justify-end">
+            <v-col class="d-flex justify-center mt-5">
               <v-btn
                 :loading="isSubmit"
+                large
+                class="white--text"
+                color="rgba(14, 14, 14, 0.99)"
                 @click.prevent="payOrder"
               >
                 確認付款

@@ -6,7 +6,10 @@
         <v-breadcrumbs :items="subNavbar" />
       </nav>
       <v-row justify="center">
-        <v-col cols="10">
+        <v-col
+          cols="12"
+          sm="10"
+        >
           <v-expansion-panels focusable>
             <v-expansion-panel>
               <v-expansion-panel-header class="d-flex justify-space-between">
@@ -30,6 +33,7 @@
                       disable-sort
                       no-data-text="購物車還是空的喔！"
                       :loading="isCartLoading"
+                      mobile-breakpoint="0"
                     >
                       <template v-slot:[`item.delete`]="{ item }">
                         <v-icon @click.prevent="removeItem(item.id)">
@@ -92,27 +96,25 @@
                 </v-row>
                 <v-row justify="end">
                   <v-col
-                    cols="6"
-                    class="pt-0"
+                    cols="12"
+                    sm="6"
+                    class="pt-0 text-right"
                   >
                     <v-text-field
                       v-model="couponCode"
-                      placeholder="請輸入優惠代碼 coupon001 享有八折優惠"
+                      placeholder="輸入 coupon001 享有八折優惠"
                       color="warning"
                       :success-messages="couponSuccess"
                       :error-messages="couponError"
                       @keyup.enter="useCoupon"
+                    />
+                    <v-btn
+                      color="warning"
+                      :loading="isCouponSubmit"
+                      @click.prevent="useCoupon"
                     >
-                      <template v-slot:append>
-                        <v-btn
-                          color="warning"
-                          :loading="isCouponSubmit"
-                          @click.prevent="useCoupon"
-                        >
-                          套用優惠碼
-                        </v-btn>
-                      </template>
-                    </v-text-field>
+                      套用優惠碼
+                    </v-btn>
                   </v-col>
                 </v-row>
               </v-expansion-panel-content>
@@ -121,7 +123,10 @@
         </v-col>
       </v-row>
       <v-row justify="center">
-        <v-col cols="8">
+        <v-col
+          cols="12"
+          sm="8"
+        >
           <v-row>
             <v-col cols="12">
               <h3 class="grey lighten-4 text-center py-4">
@@ -236,6 +241,7 @@ export default {
         },
         message: '',
       },
+      isTooltipShow: false,
       isCouponSubmit: false,
       couponCode: '',
       couponError: '',
@@ -269,6 +275,14 @@ export default {
   },
   methods: {
     async useCoupon() {
+      this.couponSuccess = '';
+      this.couponError = '';
+
+      if (!this.couponCode) {
+        this.couponError = '請輸入優惠券代碼';
+        return;
+      }
+
       this.isCouponSubmit = true;
 
       const res = await this.$axios.$post(`${this.$config.apiPath
