@@ -4,14 +4,14 @@
 
 ## 使用技術
 
-* 以 Nuxt.js 為框架，使用支援 SSR 的 universal 模式。
-* 使用 Vuetify 作為 UI 元件庫。
+* 以 `Nuxt.js` 為框架，使用支援 `SSR` 的 `universal` 模式。
+* 使用 `Vuetify` 作為 UI 元件庫。
 
 ### 其它套件
 
-* axios
-* VeeValidate 表單驗證
-* ESLint Airbnb
+* `axios`
+* `VeeValidate` 表單驗證
+* `ESLint Airbnb`
 
 ## 使用到的 API
 
