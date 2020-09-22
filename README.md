@@ -14,7 +14,7 @@ V-MARKET2.0：[https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vma
 
 * 以 **Nuxt.js** 為前端框架，使用支援 **SSR** 的 universal 模式。
 * 使用 **Vuetify** 作為 UI 元件庫。
-* 使用 **ESLint Airbnb** 管理程式碼風格。
+* 使用 **ESLint \- Airbnb** 管理程式碼風格。
 
 ## 使用套件
 
