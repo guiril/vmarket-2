@@ -29,7 +29,7 @@
 
 刪除商品：
 
-![刪除商品](https://i.imgur.com/wd8LDji.jpg)
+![刪除商品](https://i.imgur.com/lSh8mgk.jpg)
 
 訂單管理：
 
