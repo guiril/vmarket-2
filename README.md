@@ -6,7 +6,7 @@
 
 * [V-MARKET 2.0](https://ouiis.github.io/vmarket_2.0/ "V-MARKET 2.0")
 
-![首頁](https://i.imgur.com/RcBiLZq.png)
+![首頁](https://i.imgur.com/xUbNvRH.jpg)
 
 https://github.com/ouiis/vmarket
 
@@ -16,12 +16,12 @@ https://github.com/ouiis/vmarket
 
 * 以 `Nuxt.js` 為框架，使用支援 `SSR` 的 `universal` 模式。
 * 使用 `Vuetify` 作為 UI 元件庫。
+* `ESLint Airbnb`
 
-### 其它套件
+## 使用套件
 
 * `axios`
 * `VeeValidate`
-* `ESLint Airbnb`
 
 ## 使用到的 API
 
