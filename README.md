@@ -6,7 +6,7 @@
 
 ## Demo
 
-https:/ouiis.github.io/vmarket_2.0
+<base href="https:/ouiis.github.io/vmarket_2.0">
 
 ## 使用技術
 
