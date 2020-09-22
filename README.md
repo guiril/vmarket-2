@@ -9,7 +9,19 @@
 **V-MARKET2.0**：
 [https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vmarket_2.0/ "V-MARKET 2.0")
 
+### 首頁
+
 ![首頁](https://i.imgur.com/xUbNvRH.jpg)
+
+### 後台區
+
+![商品管理](https://i.imgur.com/MUA5joV.jpg)
+![新增商品](https://i.imgur.com/vecnwII.jpg)
+![編輯商品](https://i.imgur.com/2PjwQY0.jpg)
+![刪除商品](https://i.imgur.com/wd8LDji.jpg)
+![訂單管理](https://i.imgur.com/vecnwII.jpg)
+![新增優惠券](https://i.imgur.com/Btk4Fg5.jpg)
+
 
 ## 使用技術
 
