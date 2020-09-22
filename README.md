@@ -2,8 +2,6 @@
 
 使用六角學院「Vue 一個電商網頁」課程所提供的 API，模擬電商網頁的的購物流程。
 
-**首頁**
-
 ![首頁](https://i.imgur.com/RcBiLZq.png)
 
 ## Demo
