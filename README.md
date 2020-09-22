@@ -39,13 +39,13 @@
 
 ![新增優惠券](https://i.imgur.com/Btk4Fg5.jpg)
 
-## 使用技術
+## 主要使用技術
 
 * 以 **Nuxt.js** 為前端框架，使用支援 **SSR** 的 **universal** 模式。
 * 使用 **Vuetify** 作為 UI 元件庫。
 * 使用 **ESLint \- Airbnb** 管理程式碼風格。
 
-## 使用套件
+## 其他套件
 
 * [**Axios Module**](https://github.com/nuxt-community/axios-module "Axios Module")
 * [**VeeValidate**](https://github.com/logaretm/vee-validate "VeeValidate")
