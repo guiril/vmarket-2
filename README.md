@@ -7,7 +7,7 @@
 **V-MARKET2.0**：
 [https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vmarket_2.0/ "V-MARKET 2.0")
 
-![首頁](https://i.imgur.com/XRgAHnf.jpg)
+![首頁](https://i.imgur.com/xUbNvRH.jpg)
 
 > [V-MARKET 第一版](https://ouiis.github.io/vmarket "V-MARKET")
 
