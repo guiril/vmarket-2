@@ -4,7 +4,7 @@
 
 ![首頁](https://i.imgur.com/RcBiLZq.png)
 
-[V-MARKET  1.0 版](https://github.com/ouiis/vmarket)
+> [V-MARKET  1.0 版](https://github.com/ouiis/vmarket)
 
 ## 使用技術
 
