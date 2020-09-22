@@ -4,7 +4,8 @@
 
 ## Demo
 
-V-MARKET2.0：[https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vmarket_2.0/ "V-MARKET 2.0")
+**V-MARKET2.0**：
+[https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vmarket_2.0/ "V-MARKET 2.0")
 
 ![首頁](https://i.imgur.com/XRgAHnf.jpg)
 
@@ -18,8 +19,8 @@ V-MARKET2.0：[https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vma
 
 ## 使用套件
 
-* **Axios**
-* **VeeValidate**
+* [**Axios Module**](https://github.com/nuxt-community/axios-module "Axios Module")
+* [**VeeValidate**](https://github.com/logaretm/vee-validate "VeeValidate")
 
 ## 使用到的 API
 
