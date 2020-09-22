@@ -27,7 +27,7 @@
 
 ### 管理控制台 [需驗證]
 
-#### 產品
+#### 1. 產品
 
 * 商品建立 `POST` `/admin/product`
 * 取得商品列表 `GET` `/admin/products?page=:page`
@@ -36,11 +36,11 @@
 * 刪除產品 `DELETE` `/admin/product/:product_id`
 * 上傳圖片 `POST` `/admin/upload`
 
-#### 訂單
+#### 2. 訂單
 
 * 取得訂單列表 `GET` `/admin/orders?page=:page`
 
-#### 優惠券
+#### 3. 優惠券
 
 * 新增優惠券 `POST` `/admin/coupon`
 * 取得優惠券列表 `GET` `/admin/coupons?page=:page`
