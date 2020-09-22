@@ -6,8 +6,9 @@
 
 ## Demo
 
-* V-MARKET 2.0 https:/ouiis.github.io/vmarket_2.0
-* V-MARKET 1.0 https:/ouiis.github.io/vmarket
+* V-MARKET 2.0
+(https:/ouiis.github.io/vmarket_2.0)
+* V-MARKET 1.0 (https:/ouiis.github.io/vmarket)
 
 ## 使用技術
 
