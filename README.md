@@ -9,7 +9,7 @@
 
 ![首頁](https://i.imgur.com/xUbNvRH.jpg)
 
-> [V-MARKET 第一版](https://ouiis.github.io/vmarket "V-MARKET")
+> [V-MARKET 第一版](https://github.com/ouiis/vmarket "V-MARKET")
 
 ## 使用技術
 
