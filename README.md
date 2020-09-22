@@ -2,7 +2,7 @@
 
 使用六角學院「Vue 一個電商網頁」課程所提供的 API，模擬電商網頁的的購物流程。
 
-![首頁](https://github.com/ouiis/images/blob/master/vmarket2.0/01.png?raw=true)
+![首頁](https://imgur.com/a/PFv0GbC)
 
 [V-MARKET  1.0 版](https://github.com/ouiis/vmarket)
 
