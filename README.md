@@ -4,10 +4,11 @@
 
 ## Demo
 
-[V-MARKET 2.0](https://ouiis.github.io/vmarket_2.0/ "V-MARKET 2.0")
-[V-MARKET 第一版](https://github.com/ouiis/vmarket "V-MARKET")
+V-MARKET2.0：[https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vmarket_2.0/ "V-MARKET 2.0")
 
 ![首頁](https://i.imgur.com/XRgAHnf.jpg)
+
+> [V-MARKET 第一版](https://github.com/ouiis/vmarket "V-MARKET")
 
 ## 使用技術
 
