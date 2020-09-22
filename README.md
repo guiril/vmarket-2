@@ -8,7 +8,7 @@ V-MARKET2.0：[https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vma
 
 ![首頁](https://i.imgur.com/XRgAHnf.jpg)
 
-> [V-MARKET 第一版](https://github.com/ouiis/vmarket "V-MARKET")
+> [V-MARKET 第一版](https://ouiis.github.io/vmarket "V-MARKET")
 
 ## 使用技術
 
