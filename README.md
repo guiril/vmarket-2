@@ -4,7 +4,7 @@
 
 [V-MARKET  1.0 版](https://github.com/ouiis/vmarket)
 
-![首頁](https://github.com/ouiis/images/blob/master/vmarket2.0/01.png)
+![首頁](https://raw.githubusercontent.com/ouiis/images/master/vmarket2.0/01.png?token=AJMDDI5VQ3FN3NT5JI6OIO27NGDB2)
 
 ## 使用技術
 
