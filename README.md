@@ -2,14 +2,14 @@
 
 以 **Nuxt.js** 建構的前端練習，使用六角學院「Vue 一個電商網頁」課程所提供的 API，模擬電商網頁的的購物流程。
 
+> [V-MARKET 第一版](https://github.com/ouiis/vmarket "V-MARKET")
+
 ## Demo
 
 **V-MARKET2.0**：
 [https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vmarket_2.0/ "V-MARKET 2.0")
 
 ![首頁](https://i.imgur.com/xUbNvRH.jpg)
-
-> [V-MARKET 第一版](https://github.com/ouiis/vmarket "V-MARKET")
 
 ## 使用技術
 
