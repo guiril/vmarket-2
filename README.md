@@ -23,11 +23,11 @@
 
 ![](https://i.imgur.com/IorPkY3.jpg)
 
-結帳頁面*（尚未付款）*：
+結帳頁面（*尚未付款*）：
 
 ![](https://i.imgur.com/nmPS3bP.jpg)
 
-結帳頁面*（完成付款）*：
+結帳頁面（*完成付款*）：
 
 ![](https://i.imgur.com/B9Ie7nI.jpg)
 
