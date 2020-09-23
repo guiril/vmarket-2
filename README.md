@@ -57,7 +57,7 @@
 
 ![新增優惠券](https://i.imgur.com/Btk4Fg5.jpg)
 
-## 主要使用技術
+## 主要練習技術
 
 * 以 **Nuxt.js** 為前端框架，使用支援 **SSR** 的 **universal** 模式。
 * 使用 **Vuetify** 作為 UI 元件庫。
