@@ -109,7 +109,7 @@ export default {
   data() {
     return {
       subNavbar: [
-        { href: '/', text: '首頁' },
+        { to: '/', text: '首頁' },
         { text: '電影介紹' },
       ],
       product: {},
