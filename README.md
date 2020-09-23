@@ -13,6 +13,24 @@
 
 ![首頁](https://i.imgur.com/xUbNvRH.jpg)
 
+### 購物區
+
+將商品新增至購物車：
+
+![](https://i.imgur.com/pxRgpxn.jpg)
+
+購物車頁面：
+
+![](https://i.imgur.com/IorPkY3.jpg)
+
+結帳頁面（尚未付款）：
+
+![](https://i.imgur.com/nmPS3bP.jpg)
+
+結帳頁面（完成付款）：
+
+![](https://i.imgur.com/B9Ie7nI.jpg)
+
 ### 後台區
 
 商品管理：
