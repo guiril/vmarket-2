@@ -61,6 +61,7 @@
 
 * 以 **Nuxt.js** 為前端框架，使用支援 **SSR** 的 **universal** 模式。
 * 使用 **Vuetify** 作為 UI 元件庫。
+* 使用 **Vuex** 管理資料狀態。
 * 使用 **ESLint \- Airbnb** 管理程式碼風格。
 
 ## 其他套件
