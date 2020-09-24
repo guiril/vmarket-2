@@ -1,6 +1,6 @@
 # V-MARKET 2.0
 
-以 **Nuxt.js** 為框架的前端練習，改版 Vue + Vue CLI 的練習作品。
+以 **Nuxt.js** 為框架的前端練習，改版 Vue + Vue CLI 的專案。
 
 > [V-MARKET 第一版](https://github.com/ouiis/vmarket "V-MARKET")
 
