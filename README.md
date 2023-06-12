@@ -2,7 +2,7 @@
 
 以 **Nuxt.js** 為框架的前端練習，改版 Vue + Vue CLI 的前端專案。
 
-> [V-MARKET 第一版](https://github.com/ouiis/vmarket "V-MARKET")
+> [V-MARKET 第一版](https://github.com/guiril/vmarket "V-MARKET")
 
 ## 主要練習技術
 
@@ -64,7 +64,7 @@
 ## Demo
 
 **V-MARKET 2.0**：
-[https://ouiis.github.io/vmarket_2.0/](https://ouiis.github.io/vmarket_2.0/ "V-MARKET 2.0")
+[https://ouiis.github.io/vmarket_2.0/](https://guiril.github.io/vmarket_2.0/ "V-MARKET 2.0")
 
 ### 首頁
 
