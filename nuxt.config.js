@@ -1,7 +1,7 @@
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
   ? {
     router: {
-      base: '/vmarket_2.0/',
+      base: '/vmarket-2/',
     },
   }
   : {};
