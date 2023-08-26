@@ -114,6 +114,8 @@ export default {
       const res = await this.$axios.post(`${this.$config.apiPath}/admin/signin`, this.user);
 
       if (res.data.success) {
+        const { expired, token } = res.data;
+        document.cookie = `hexToken=${token}; expires=${new Date(expired)};`;
         this.$router.push('admin/products');
       } else {
         this.isLoading = false;
